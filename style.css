@@ -1,0 +1,64 @@
+*{
+    font-family: 'monaco', monospace;
+}
+body {
+    background-color: rgb(111, 124, 133);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    font-size: 60px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 550px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h1, .container p {
+    text-align: center;
+    font-size: calc(1.5rem + 1.5vw);
+    color: white;
+}
+
+input, .container p {
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.123);
+    color: white;
+    font-size: 1rem;
+}
+button{
+    background-color: rgb(65, 82, 94);
+    color: white;
+    border: 1px rgba(255, 255, 255, 0.349) solid;
+    padding: 6px;
+    font-size: 15px;
+    width: 20vw;
+}
+.outputt{
+    background-color: rgba(255, 255, 255, 0);
+}
+::placeholder {
+    color: white;
+    opacity: 0.7; /* Firefox */
+}
