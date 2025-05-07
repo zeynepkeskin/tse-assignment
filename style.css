@@ -1,19 +1,24 @@
 *{
     font-family: 'monaco', monospace;
+    margin-bottom: 30px;
 }
 body {
-    background-color: rgb(111, 124, 133);
+    background-color: rgba(228, 194, 210, 0.541);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 h1{
-    color: rgb(255, 255, 255);
+    color: rgb(156, 97, 125);
     text-align: center;
-
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 60px;
+    background-color: rgba(231, 179, 203, 0.733);
 }
 
 .container {
@@ -24,9 +29,10 @@ h1{
     width: 90%;
     max-width: 550px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.048);
+    background-color: rgb(238, 207, 222);
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(122, 88, 104, 0.13);
+    border: 10PX solid white;
 }
 
 .container h1, .container p {
@@ -43,22 +49,41 @@ input, .container p {
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.123);
+    background-color: rgba(255, 255, 255, 0.233);
     color: white;
     font-size: 1rem;
+    font-family: "Sour Gummy", sans-serif;
+    
 }
 button{
-    background-color: rgb(65, 82, 94);
+    background-color: rgba(231, 179, 203, 0.733);
     color: white;
-    border: 1px rgba(255, 255, 255, 0.349) solid;
+    border: 1px rgba(255, 255, 255, 0) solid;
     padding: 6px;
-    font-size: 15px;
-    width: 20vw;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 15vw;
+    cursor: pointer;
+    font-family: "Sour Gummy", sans-serif;
 }
-.outputt{
-    background-color: rgba(255, 255, 255, 0);
+button:hover{
+    background-color: rgba(255, 255, 255, 0.233);
+    color: rgb(231, 179, 203);
+    border: 1px rgb(231, 179, 203) solid;
+    transition: all 0.2s ease-in-out;
+}
+.outputt, #output{
+    max-width: 400px;
+    background-color: rgba(212, 152, 182, 0.26);
+    font-family: "Sour Gummy", sans-serif;
 }
 ::placeholder {
     color: white;
-    opacity: 0.7; /* Firefox */
+    opacity: 1; /* Firefox */
+}
+
+#decodedOutput{
+    background-color: rgba(212, 152, 182, 0.26);
+    font-family: "Sour Gummy", sans-serif;
+font-weight: bold;
 }
