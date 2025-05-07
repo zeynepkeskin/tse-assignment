@@ -35,13 +35,44 @@ const numberToLetter = Object.fromEntries(
 
 // Function to add noise to the array
 // adds 1-3 random numbers (27-76) to the array
+// UPDATE: adds random characters (symbols, emojis, capital/lowercase letters) to the array
 function addNoise(arr) {
   const noiseArray = arr.slice();
-  const noiseCount = Math.floor(Math.random() * 3) + 1; // 1-3 noise elements
+  const noiseCount = Math.floor(Math.random() * 10) + 7; // 7-16 noise items
+
+  const noisePool = [
+    // Emojis and symbols
+    "💔",
+    "😔",
+    "#",
+    "$",
+    "%",
+    "!",
+    "@",
+    "&",
+    "😂",
+    "🤓",
+    // Capital letters
+    ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    // Lowercase letters
+    ..."abcdefghijklmnopqrstuvwxyz",
+  ];
+
   for (let i = 0; i < noiseCount; i++) {
-    const noiseValue = Math.floor(Math.random() * 50) + 27; // Numbers 27+ are fake
-    noiseArray.push(noiseValue);
+    const chooseType = Math.random();
+
+    if (chooseType < 0.5) {
+      // Add fake number (27–99)
+      const fakeNumber = Math.floor(Math.random() * 73) + 27;
+      noiseArray.push(fakeNumber);
+    } else {
+      // Add a random character (emoji, symbol, letter)
+      const randomNoise =
+        noisePool[Math.floor(Math.random() * noisePool.length)];
+      noiseArray.push(randomNoise);
+    }
   }
+
   return noiseArray;
 }
 
@@ -59,7 +90,6 @@ function zipperArray(arr) {
     }
     toggle = !toggle;
   }
-
   return result;
 }
 
@@ -82,6 +112,8 @@ function unzipZipperedArray(arr) {
   return result;
 }
 
+// Function to convert text to numbers and add noise
+// and then zip the array
 function convertText() {
   const input = document.getElementById("textInput").value.toLowerCase();
   const numberArray = [];
@@ -93,10 +125,13 @@ function convertText() {
       numberArray.push(letterToNumber[char]);
     }
   }
-
+  console.log(numberArray);
   const withNoise = addNoise(numberArray);
+  console.log(withNoise);
   const reversed = withNoise.reverse();
+  console.log(reversed);
   const zippered = zipperArray(reversed);
+  console.log(zippered);
 
   document.getElementById("output").textContent = JSON.stringify(zippered);
 }
