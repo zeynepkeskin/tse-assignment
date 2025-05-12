@@ -1,9 +1,10 @@
 *{
     font-family: 'monaco', monospace;
     margin-bottom: 30px;
+
 }
 body {
-    background-color: rgba(228, 194, 210, 0.541);
+    background-color: #A35C7A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,13 +13,13 @@ body {
     overflow: hidden;
 }
 h1{
-    color: rgb(156, 97, 125);
+    color: #212121;
     text-align: center;
     font-family: "Limelight", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
-    background-color: rgba(231, 179, 203, 0.733);
+    background-color: rgba(231, 179, 203, 0.363);
 }
 
 .container {
@@ -29,16 +30,16 @@ h1{
     width: 90%;
     max-width: 550px;
     padding: 20px;
-    background-color: rgb(238, 207, 222);
+    background-color: #C890A7;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(122, 88, 104, 0.13);
-    border: 10PX solid white;
+    border: 10PX solid #FBF5E5;
 }
 
 .container h1, .container p {
     text-align: center;
     font-size: calc(1.5rem + 1.5vw);
-    color: white;
+    color: #212121;
 }
 
 input, .container p {
@@ -49,15 +50,15 @@ input, .container p {
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.233);
-    color: white;
+    background-color: #fbf5e5;
+    color: #212121;
     font-size: 1rem;
     font-family: "Sour Gummy", sans-serif;
     
 }
 button{
-    background-color: rgba(231, 179, 203, 0.733);
-    color: white;
+    background-color: #A35C7A;
+    color: #212121;
     border: 1px rgba(255, 255, 255, 0) solid;
     padding: 6px;
     font-size: 20px;
@@ -74,16 +75,14 @@ button:hover{
 }
 .outputt, #output{
     max-width: 400px;
-    background-color: rgba(212, 152, 182, 0.26);
     font-family: "Sour Gummy", sans-serif;
 }
 ::placeholder {
-    color: white;
+    color: #212121;
     opacity: 1; /* Firefox */
 }
 
 #decodedOutput{
-    background-color: rgba(212, 152, 182, 0.26);
     font-family: "Sour Gummy", sans-serif;
 font-weight: bold;
 }
